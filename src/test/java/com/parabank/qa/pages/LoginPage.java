@@ -18,6 +18,9 @@ public class LoginPage extends PageObject{
     @FindBy(css = "input.button[value = 'Log In']")
     private WebElementFacade loginButton;
 
+    @FindBy(css = "p.error")
+    private WebElementFacade errorMessage;
+
     public void enterUsername(String username){
         usernameField.type(username);
     }
@@ -34,5 +37,9 @@ public class LoginPage extends PageObject{
         enterUsername(username);
         enterPassword(password);
         clickLogin();
+    }
+
+    public String getErrorMessage(){
+        return errorMessage.getText();
     }
 }

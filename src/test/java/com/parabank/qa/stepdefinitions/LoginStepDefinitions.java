@@ -26,4 +26,12 @@ public class LoginStepDefinitions {
                 loginPage.getDriver().getCurrentUrl().contains("overview.htm")
         );
     }
+
+    @Then("deberia ver un mensaje de error de login")
+    public void deberiaverunmensajedeerrordelogin(){
+        Assert.assertEquals(
+                "The username and password could not be verified.",
+                loginPage.getErrorMessage()
+        );
+    }
 }
