@@ -5,7 +5,7 @@ Feature: Login en ParaBank
 
   Scenario: Login exitoso con credenciales validas
     Given que el cliente esta en la pagina de login de Parabank
-    When ingresa el usuario "usuarioqa2" y la clave "contraseña1"
+    When ingresa el usuario "usuarioqa3" y la clave "contraseña1"
     Then deberia ver su pagina de cuentas
 
   Scenario: Login fallido con credenciales invalidas
